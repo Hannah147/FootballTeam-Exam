@@ -25,8 +25,7 @@ namespace FootballTeam
                 if(DateOfBirth.DayOfYear > DateTime.Now.DayOfYear)
                     _age--;
                     return _age;
-            }
-            
+            } 
         }
     }
 }

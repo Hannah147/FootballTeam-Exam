@@ -17,14 +17,27 @@ namespace FootballTeam
 {
     // enum - question 3
     public enum Position { Goalkeeper, Defender, Midfielder, Forward}
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        private static Random rng = new Random();
         public MainWindow()
         {
             InitializeComponent();
+            string[] firstNames = {
+                "Adam", "Amelia", "Ava", "Chloe", "Conor", "Daniel", "Emily",
+                "Emma", "Grace", "Hannah", "Harry", "Jack", "James",
+                "Lucy", "Luke", "Mia", "Michael", "Noah", "Sean", "Sophie"};
+
+
+            string[] lastNames = {
+                "Brennan", "Byrne", "Daly", "Doyle", "Dunne", "Fitzgerald", "Kavanagh",
+                "Kelly", "Lynch", "McCarthy", "McDonagh", "Murphy", "Nolan", "O'Brien",
+                "O'Connor", "O'Neill", "O'Reilly", "O'Sullivan", "Ryan", "Walsh"
+            };
         }
     }
 }
