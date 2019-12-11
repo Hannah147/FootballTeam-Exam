@@ -37,8 +37,10 @@ namespace FootballTeam
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             CreateObjects();
+
         }
 
+        // Method to create objects / players
         private void CreateObjects()
         {
             string[] firstNames = {
@@ -97,24 +99,53 @@ namespace FootballTeam
             PlayerDetails[16].Position = Position.Defender;
             PlayerDetails[17].Position = Position.Midfielder;
 
+            int goalkeeperTotal = 0;
+            int defenderTotal = 0;
+            int midfielderTotal = 0;
+            int forwardTotal = 0;
+
+            // Code started for the Combo Box form validation, ran out of time
             for (int i = 0; i < PlayerDetails.Length; i++)
             {
                 allPlayers.Add(PlayerDetails[i]);
+                if(PlayerDetails[i].Position == Position.Goalkeeper)
+                {
+                    goalkeeperTotal++;
+                }
+                else if (PlayerDetails[i].Position == Position.Defender)
+                {
+                    defenderTotal++;
+                }
+                else if (PlayerDetails[i].Position == Position.Midfielder)
+                {
+                    midfielderTotal++;
+                }
+                else if (PlayerDetails[i].Position == Position.Defender)
+                {
+                    forwardTotal++;
+                }
             }
 
+            // Didn't have enough time to work on the formation validation
+            //if(cbFormation. = "4-4-2")
+
             lbxAllPlayers.ItemsSource = allPlayers;
+
+            
         }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             Player selectedPlayer = lbxAllPlayers.SelectedItem as Player;
             int spaces = 11;
 
+            // check if null
             if (selectedPlayer != null)
             {
                 if (selectedPlayers.Count < 11)
                 {
                     allPlayers.Remove(selectedPlayer);
                     selectedPlayers.Add(selectedPlayer);
+                    // calculate spaces left
                     spaces = spaces - selectedPlayers.Count;
                     tblkSpaces.Text = spaces.ToString();
                     allPlayers.Sort();
@@ -122,9 +153,11 @@ namespace FootballTeam
                 }
                 else
                 {
+                    // display message box if too many players added
                     MessageBox.Show($"Too Many players added", "ERROR", MessageBoxButton.OKCancel, MessageBoxImage.Error);
                 }
 
+                // refresh the screen
                 RefreshScreen();
             }
         }
@@ -151,6 +184,7 @@ namespace FootballTeam
                 spaces = spaces + selectedPlayers.Count;
                 tblkSpaces.Text = spaces.ToString();
 
+                // Sort the players by position then first  name
                 allPlayers.Sort();
                 selectedPlayers.Sort();
 

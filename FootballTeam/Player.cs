@@ -9,6 +9,7 @@ namespace FootballTeam
     //public enum Position { Goalkeeper, Defender, Midfielder, Forward}
     public class Player:IComparable
     {
+        // Properties
         public string FirstName { get; set; }
         public string Surname { get; set; }
         public Position Position { get; set; }
@@ -17,6 +18,7 @@ namespace FootballTeam
 
         private int _age;
 
+        // caluclate age
         public int Age
         {
             get
@@ -28,6 +30,7 @@ namespace FootballTeam
             } 
         }
 
+        // constructors
         public Player(string firstName, string surname, Position position, DateTime dateofbirth)
         {
             FirstName = firstName;
@@ -46,6 +49,7 @@ namespace FootballTeam
             return $"{FirstName} {Surname} {(Age)} {Position}";
         }
 
+        // Compare to method for sorting
         public int CompareTo(object other)
         {
             Player that = (Player)other;
