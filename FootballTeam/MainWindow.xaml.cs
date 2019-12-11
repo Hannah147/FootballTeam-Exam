@@ -15,6 +15,8 @@ using System.Windows.Shapes;
 
 namespace FootballTeam
 {
+    // enum - question 3
+    public enum Position { Goalkeeper, Defender, Midfielder, Forward}
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
