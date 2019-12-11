@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:FootballTeam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <ListBox x:Name="lbxAllPlayers" HorizontalAlignment="Left" Height="261" Margin="42,84,0,0" VerticalAlignment="Top" Width="244"/>
         <Label x:Name="lblAllPlayers" Content="All Players" HorizontalAlignment="Left" Margin="42,53,0,0" VerticalAlignment="Top"/>

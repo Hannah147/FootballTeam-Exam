@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FootballTeam
 {
     //public enum Position { Goalkeeper, Defender, Midfielder, Forward}
-    class Player
+    public class Player
     {
         public string FirstName { get; set; }
         public string Surname { get; set; }
@@ -26,6 +26,24 @@ namespace FootballTeam
                     _age--;
                     return _age;
             } 
+        }
+
+        public Player(string firstName, string surname, Position position, DateTime dateofbirth)
+        {
+            FirstName = firstName;
+            Surname = surname;
+            Position = position;
+            DateOfBirth = dateofbirth;
+        }
+
+        public Player()
+        {
+
+        }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {Surname} {(Age)} {Position}";
         }
     }
 }
