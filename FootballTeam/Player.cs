@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace FootballTeam
 {
     //public enum Position { Goalkeeper, Defender, Midfielder, Forward}
-    public class Player
+    public class Player:IComparable
     {
         public string FirstName { get; set; }
         public string Surname { get; set; }
@@ -44,6 +44,17 @@ namespace FootballTeam
         public override string ToString()
         {
             return $"{FirstName} {Surname} {(Age)} {Position}";
+        }
+
+        public int CompareTo(object other)
+        {
+            Player that = (Player)other;
+            int returnValue = this.Position.CompareTo(that.Position);
+            if(returnValue == 0)
+            {
+                returnValue = this.FirstName.CompareTo(that.FirstName);
+            }
+            return returnValue;
         }
     }
 }

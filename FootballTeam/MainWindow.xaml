@@ -9,12 +9,12 @@
     <Grid>
         <ListBox x:Name="lbxAllPlayers" HorizontalAlignment="Left" Height="261" Margin="42,84,0,0" VerticalAlignment="Top" Width="244"/>
         <Label x:Name="lblAllPlayers" Content="All Players" HorizontalAlignment="Left" Margin="42,53,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnAdd" Content="Add &gt;&gt;" HorizontalAlignment="Left" Margin="368,149,0,0" VerticalAlignment="Top" Width="75"/>
-        <Button x:Name="btnRemove" Content="&lt;&lt; Remove" HorizontalAlignment="Left" Margin="368,275,0,0" VerticalAlignment="Top" Width="75"/>
+        <Button x:Name="btnAdd" Content="Add &gt;&gt;" HorizontalAlignment="Left" Margin="368,149,0,0" VerticalAlignment="Top" Width="75" Click="BtnAdd_Click"/>
+        <Button x:Name="btnRemove" Content="&lt;&lt; Remove" HorizontalAlignment="Left" Margin="368,275,0,0" VerticalAlignment="Top" Width="75" Click="BtnRemove_Click"/>
         <ListBox x:Name="lbxSelectedPlayers" HorizontalAlignment="Left" Height="261" Margin="504,84,0,0" VerticalAlignment="Top" Width="244"/>
         <Label x:Name="lblSelected" Content="Selected Players" HorizontalAlignment="Left" Margin="504,53,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblFormation" Content="Formation" HorizontalAlignment="Left" Margin="116,10,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblSpaces" Content="Label" HorizontalAlignment="Left" Margin="504,372,0,0" VerticalAlignment="Top"/>
+        <Label x:Name="lblSpaces" Content="Spaces" HorizontalAlignment="Left" Margin="504,372,0,0" VerticalAlignment="Top"/>
         <TextBlock x:Name="tblkSpaces" HorizontalAlignment="Left" Margin="586,377,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
         <ComboBox x:Name="cbFormation" HorizontalAlignment="Left" Margin="202,10,0,0" VerticalAlignment="Top" Width="120">
             <ComboBoxItem Content="4-4-2"></ComboBoxItem>
